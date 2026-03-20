@@ -1,0 +1,158 @@
+/* No topo do seu CSS, após importar do Google Fonts */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: white; /* Garante que todo o texto seja branco */
+}
+body { background-image: url(img/gss4kTM.png);
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+body{background-color: #000000;}
+h1{color: hsl(0, 100%, 100%);}
+h2{color: hsl(0, 0%, 100%);}
+p{color: hsl(0, 0%, 100%);}  
+header {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do header */
+    flex-direction: column; /* Alinha os itens do header em uma coluna */
+    align-items: center; /* Centraliza os itens do header verticalmente */
+    nav a {
+    margin: 0 35px;      /* 0 em cima/baixo e 35px nas laterais de cada link */
+    text-decoration: none; /* Aproveite para tirar o sublinhado se quiser */
+}}
+footer {
+    background-color: #000; /* A cor que você já está usando */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+/* Configura o corpo do site para ocupar a tela toda */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o corpo ter no mínimo o tamanho da tela */
+    margin: 0;
+}
+
+/* Identifica o conteúdo do meio e manda ele "crescer" */
+/* Se você não usa a tag <main>, pode usar uma div que envolva seu texto */
+main {
+    flex: 1; 
+}
+
+/* O rodapé agora ficará naturalmente no final */
+footer {
+    text-align: center;
+    padding: 100px;
+    background-color: #000; /* Ou a cor que você preferir */
+}
+footer {
+    position: fixed;   /* Fixa o elemento na tela */
+    left: 0;
+    bottom: 0;         /* Cola no fundo */
+    width: 100%;       /* Garante que ocupe a largura toda */
+    background-color: #000; /* Cor de fundo para não ficar transparente */
+    text-align: center;
+    padding: 15px 0;
+}
+a { 
+    color: hsl(0, 0%, 100%); 
+    text-decoration: none; 
+}
+/* Se a imagem estiver no body */
+body {
+    /* Mantenha o seu código de background atual... */
+    background-image: url('img/gss4kTM.png'); /* Sua imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* ...e ADICIONE esta linha de overlay: */
+    background-blend-mode: multiply; /* Faz as cores se misturarem */
+    background-color: rgba(0, 0, 0, 0.6); /* Preto com 60% de opacidade */
+}
+footer p{
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Uma linha super fina no topo */
+    color: #888888; /* Um cinza mais escuro para o texto do rodapé */
+    font-size: 0.9em;
+}
+body {
+    font-family: 'PT Serif', serif;
+    font-size: 18px;    /* Serifadas ficam lindas um pouco maiores */
+    line-height: 1.6;   /* Dá aquele respiro entre as linhas que deixa elegante */
+    color: white;       /* Para destacar no seu fundo escuro */
+}
+
+/* Se quiser que os títulos fiquem em Negrito (Bold) */
+h1, h2 {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05); /* Um branco quase transparente */
+    backdrop-filter: blur(10px);           /* O efeito de vidro fosco */
+    border-radius: 20px;                   /* Cantos arredondados */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Uma borda bem fininha */
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Aumenta o espaço entre as linhas do texto */
+    color: #ddd;      /* Um branco levemente cinza para não cansar o olho */
+}
+.cartao-glass {
+    /* ...mantenha o seu código de vidro, blur e sombra... */
+    position: relative; /* FUNDAMENTAL: Diz aos pseudo-elementos para se alinharam a ESTA div */
+    overflow: visible;  /* Garante que os elementos pendurados não sejam cortados */
+    margin-top: 100px; /* Dá espaço acima do vidro para a coroa/pêlo */
+}
+/* --- A COROA (Centro do topo) --- */
+.cartao-glass::before {
+    content: ''; /* Campo obrigatório, mesmo que vazio */
+    position: absolute;
+    top: -50px; /* Empurra para CIMA do vidro */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza perfeitamente */
+    
+    width: 80px;  /* Tamanho da coroa */
+    height: 80px;
+    
+    /* Substitua a URL abaixo pela imagem da sua coroa */
+    background-image: url('url-da-sua-imagem-de-coroa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Efeito metálico/brilho para combinar com o fundo */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    z-index: 2; /* Garante que fique SOBRE o vidro */
+}
+
+/* --- O PÊLO/CORRENTINHA (Canto do topo) --- */
+.cartao-glass::after {
+    content: '';
+    position: absolute;
+    top: -30px; /* Um pouco mais baixo que a coroa */
+    right: 20px; /* No canto direito */
+    
+    width: 40px;  /* Tamanho do pêlo ou correntinha */
+    height: 60px;
+    
+    /* Substitua a URL abaixo pela imagem do pêlo/penduricalho */
+    background-image: url('url-da-sua-imagem-de-pelo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+    z-index: 2;
+}
